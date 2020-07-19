@@ -1,0 +1,46 @@
+{% extends 'shoopeasy/basic.html' %}
+{% block css %}
+h2 {
+  color:darkkhaki;
+}
+{% endblock %}
+{% block title %}About us{% endblock %}
+{% block body %}
+ <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3 my-4 sho">Shoopeasy.com</h1>
+      <p class="need">Shoopeasy was founded by Gaurav thakur, New delhi,india, on July 9, 2020. The company started as an online marketplace for books but expanded to sell electronics, software, video games, apparel, furniture, food, toys, and jewelry. In 2020, Shoopeasy surpassed Walmart as the most valuable retailer in the United States by market capitalization.In 2020, Shoopeasy acquired Whole Foods Market for US$13.4 billion, substantially increasing Shoopeasy's footprint as a physical retailer.In 2020, Thakur announced that its two-day delivery service, Shoopeasy Prime, had surpassed 100 million subscribers worldwide.
+          Shoopeasy distributes downloads and streaming of video, music, and audiobooks through its Prime Video, Shoopeasy Music, Twitch, and Audible subsidiaries. Shoopeasy also has a publishing arm, Shoopeasy Publishing, a film and television studio, Shoopeasy Studios, and a cloud computing subsidiary, Shoopeasy Web Services. It produces consumer electronics including Kindle e-readers, Fire tablets, Fire TV, and Echo devices. In addition, Shoopeasy acquisitions include Ring, Twitch, Whole Foods Market, and IMDb. Among various controversies, the company has been criticized for technological surveillance overreach,a hyper-competitive and demanding work culture, tax avoidance,and anti-competitive practices.</p>
+      <p><button class="btn btn-primary btn-lg him">Hide Info &raquo;</button></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="col center">
+        <center>
+      <div class="col-md-4">
+        <h2 class="my-4" >About developer</h2>
+        <p>Developed by <b>GAURAV THAKUR</b> while learning django concepts and implementing this website with some guides from online resources and materials.</p>
+        <button class="btn btn-secondary" >Thanks for visiting &raquo;</button>
+      </div>
+        </center>
+    </div>
+
+  </div>
+{% endblock %}
+{% block js %}
+
+         $( function(){
+
+            $('.sho').css("color","white");
+            $('.need').hide().css("text-align","justify");
+            $('.jumbotron').css("background-color","#27292a");
+            $('.need').css("color","lightskyblue").show(5000);
+                });
+            $('.him').click(function(){
+              $('.need').slideToggle(5000);
+              $('.him').text('Show Info >> ');
+             });
+
+{% endblock %}

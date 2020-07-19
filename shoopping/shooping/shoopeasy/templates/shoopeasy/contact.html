@@ -1,0 +1,66 @@
+{% extends 'shoopeasy/basic.html' %}
+{% block css %}
+body{
+    background:url("/static/shoopeasy/background.jpg") no-repeat;
+}
+  h1{
+     color:#ffc107;
+     text-shadow: 2px 2px 8px #FF0000;
+}
+  label{
+   font-size:1.7em;
+   color:#000;
+}
+
+{% endblock %}
+{% block title %}Contact us{% endblock %}
+{% block body %}
+<div class="container my-4">
+    <center> <h1><b>Contact Us</b></h1> </center>
+
+<form action="/shoopeasy/contact/" id="myform" method="post"> {% csrf_token %}
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name ">
+  </div>
+
+    <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email ">
+  </div>
+
+    <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number ">
+  </div>
+
+
+  <div class="form-group">
+    <label for="desc">How may we help you ?</label>
+    <textarea class="form-control" id="desc" name="desc" rows="4" placeholder="Please enter your problem here"></textarea>
+  </div>
+
+   <center> <button type="submit" class="btn btn-success">Submit</button> </center>
+</form>
+</div>
+
+{% endblock %}
+{% block js %}
+$(function(){
+   $('body').fadeOut();
+   $('body').fadeIn(4000);
+
+});
+    {% if thk %}
+    alert('Thanks for contacting with us. We will get in touch with you. ');
+    {% endif %}
+function askforsubmit(){
+
+if(confirm("Are you sure you want to submit")){
+   $('#myform').submit();
+   alert("We will soon get in touch with you."); }
+else{
+   $('#myform').reset();
+}
+}
+{% endblock %}
