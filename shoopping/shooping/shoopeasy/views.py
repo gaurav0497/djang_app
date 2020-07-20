@@ -8,7 +8,6 @@ from datetime import datetime
 # Create your views here.
 
 def index(request):
-
     allprod = []
     catprod=Product.objects.values('category', 'id')
     categories = {item['category'] for item in catprod}
@@ -19,6 +18,31 @@ def index(request):
         allprod.append([product, range(1, nSlides), nSlides])
     params = {'allprod' : allprod}
     return render(request, 'shoopeasy/index.html', params)
+
+def Match_result(a,b):
+    if a in b.desc.lower() or a in b.name.lower() or a in b.category.lower() or a in b.subcategory.lower():
+        return True
+    else:
+        return False
+
+
+def search(request):
+    q = request.GET.get('search').lower()
+    allprod = []
+    catprod = Product.objects.values('category', 'id')
+    categories = {item['category'] for item in catprod}
+    for categry in categories:
+        products = Product.objects.filter(category=categry)
+        product = [items for items in products if Match_result(q, items)]
+        n = len(product)
+        nSlides = n // 4 + ceil((n / 4) - n // 4)
+        if len(product) != 0:
+            allprod.append([product, range(1, nSlides), nSlides])
+    params = {'allprod': allprod, 'msg': ""}
+
+    if ((len(allprod) == 0) or (len(q) <= 3)):
+        params = {'msg': "Do not mess with me.Please use valid search."}
+    return render(request, 'shoopeasy/search.html', params)
 
 
 def about(request):
@@ -44,14 +68,9 @@ def productview(request, pdid):
     return render(request, 'shoopeasy/prodview.html', {'products': products[0]})
 
 
-def search(request):
-    print(str(datetime.now())[:-7])
-    return render(request, 'shoopeasy/search.html')
-
-
 def checkout(request):
 
-    thank =False
+    thank = False
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -83,7 +102,6 @@ def tracker(request):
         try:
             order = Order.objects.filter(order_id=ord_id, email=email)
             if(len(order) > 0):
-
                 update = UpdateOrder.objects.filter(order_id=ord_id)
                 updates = []
                 for i in update:

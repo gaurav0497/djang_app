@@ -62,11 +62,7 @@
     </div>
 </div>
 
-
-
 {% endblock %}
-
-
 
 {% block js %}
             if(localStorage.getItem('cart')=="{}"){
@@ -86,14 +82,13 @@
                     <span class="col-4"><b>${name1}</b></span><span class="col-4"><b>Qty: ${qty1}</b></span> <b>Price:</b>
                     <span class="badge badge-primary badge-pill" style="font-size:1.2em;">${price1}</span> </li>`;
                    $('#items').append(mys);
-
               }
                mys = `<li class="list-group-item d-flex justify-content-between align-items-center effect">
                       <span class="col-8 badge1" style="text-align:right; font-size:1.18em; color:coral;">The total amount to be paid is :-> </span>
                       <span class="badge badge-primary badge-pill col-2" style="font-size:1.3em;"> Rs: ${total}</span></li>`;
                 $('#items').append(mys);
             }
-           $('.list-group-item').hide();
+          $('.list-group-item').hide();
           $('.list-group-item').toggle(3000);
           $('#data').val(JSON.stringify(cart1));
           {% if thank %}
@@ -106,6 +101,5 @@
              $('.badge1').fadeIn(1000);
           }
           setInterval(blink_text,1000);
-
 
 {% endblock %}

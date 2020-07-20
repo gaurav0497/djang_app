@@ -41,9 +41,9 @@
           </li>
         </ul>
 
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <form class="form-inline my-2 my-lg-0" method="get" action="/shoopeasy/search/">
+          <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search" name="search" id="search">
+          <button class="btn btn-outline-success my-2 my-sm-0"  type="submit">Search</button>
         </form>
 
          <button type="button" class="btn btn-secondary mx-2" id="popcart" data-container="body" data-html="true" data-toggle="popover" sanitize="true" data-placement="bottom" data-content="Cart has items">
@@ -71,9 +71,7 @@
             $('p').hide();
             $('p').show(3000);
                 });
-
         {% block js %}
-
         {% endblock %}
     </script>
   </body>
