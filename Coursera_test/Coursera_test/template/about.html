@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block css %}
+#text{
+color:azure;
+font-size:0.95em;
+text-align:center;
+margin-top:5px;
+}
+{% endblock %}
+{% block content %}
+<center><h1 style="color:white">About us</h1></center>
+<p id="text">
+    In the early medieval era, Christianity, Islam, Judaism, and Zoroastrianism put down roots on India's southern and western coasts. Muslim armies from Central Asia intermittently overran India's northern plains,eventually establishing the Delhi Sultanate, and drawing northern India into the cosmopolitan networks of medieval Islam.In the 15th century, the Vijayanagara Empire created a long-lasting composite Hindu culture in south India.In the Punjab, Sikhism emerged, rejecting institutionalised religion.The Mughal Empire, in 1526, ushered in two centuries of relative peace,leaving a legacy of luminous architecture.Gradually expanding rule of the British East India Company followed, turning India into a colonial economy, but also consolidating its sovereignty.British Crown rule began in 1858. The rights promised to Indians were granted slowly,but technological changes were introduced, and ideas of education, modernity and the public life took root.A pioneering and influential nationalist movement emerged, which was noted for nonviolent resistance and became the major factor in ending British rule.In 1947 the British Indian Empire was partitioned into two independent dominions, a Hindu-majority Dominion of India and a Muslim-majority Dominion of Pakistan, amid large-scale loss of life and an unprecedented migration.
+
+</p>
+
+{% endblock %}
+
+
+{% block javascript %}
+$('#about').addClass('active');
+{% endblock %}

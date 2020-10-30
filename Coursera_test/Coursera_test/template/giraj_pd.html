@@ -1,0 +1,122 @@
+{% extends 'index.html' %}
+
+{% block css %}
+.card-img{
+    width: 340px;
+    height: 300px;
+    border-radius: 4px;
+    box-shadow: 5px 8px 5px 5px whitesmoke;
+  }
+  .img-thumbnail{
+   box-shadow: -2px 6px 8px 2px lightblue;
+ }
+{% endblock %}
+{% block content %}
+    <div class="row m-2">
+        <div class="card m-2" style="width: 18rem;">
+            {% load static %}
+          <img src="{% static 'tea.jpg' %}" class="card-img img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tea</h5>
+              <p class="card-text"><b>125g @ Rs 450</b></p>
+            <button  class="btn btn-primary cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+
+          <img src="{% static 'ghee.jpg' %}" class="card-img img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Amul ghee</h5>
+              <p class="card-text"><b>1 litre @ Rs 500</b></p>
+            <button class="btn btn-primary cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+          <img src="{% static 'knor.jpg' %}" class="card-img img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Knorr Soup</h5>
+              <p class="card-text"><b>20g @ Rs 49</b></p>
+            <button href="#" class="btn btn-primary cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+          <img src="{% static 'knor.jpg' %}" class="card-img img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Knorr Soup</h5>
+              <p class="card-text"><b>20g @ Rs 49</b></p>
+            <button href="#" class="btn btn-primary cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+          <img src="{% static 'knor.jpg' %}" class="card-img img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Knorr Soup</h5>
+              <p class="card-text"><b>20g @ Rs 49</b></p>
+            <button href="#" class="btn btn-primary cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+          <img src="{% static 'knor.jpg' %}" class="card-img img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Knorr Soup</h5>
+              <p class="card-text"><b>20g @ Rs 49</b></p>
+            <button href="#" class="btn btn-primary cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+          <img src="{% static 'knor.jpg' %}" class="card-img img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Knorr Soup</h5>
+              <p class="card-text"><b>20g @ Rs 49</b></p>
+            <button href="#" class="btn btn-primary cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+          <img src="{% static 'knor.jpg' %}" class="card-img img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Knorr Soup</h5>
+              <p class="card-text"><b>20g @ Rs 49</b></p>
+            <button href="#" class="btn btn-primary cart">Add to Cart</button>
+          </div>
+        </div>
+         <div class="card m-2" style="width: 18rem;">
+            {% load static %}
+          <img src="{% static 'tea.jpg' %}" class="card-img img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tea</h5>
+              <p class="card-text"><b>125g @ Rs 450</b></p>
+            <button  class="btn btn-primary cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+
+          <img src="{% static 'ghee.jpg' %}" class="card-img img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Amul ghee</h5>
+              <p class="card-text"><b>1 litre @ Rs 500</b></p>
+            <button class="btn btn-primary cart">Add to Cart</button>
+          </div>
+        </div>
+         <div class="card m-2" style="width: 18rem;">
+            {% load static %}
+          <img src="{% static 'tea.jpg' %}" class="card-img img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tea</h5>
+              <p class="card-text"><b>125g @ Rs 450</b></p>
+            <button  class="btn btn-primary cart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 18rem;">
+
+          <img src="{% static 'ghee.jpg' %}" class="card-img img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Amul ghee</h5>
+              <p class="card-text"><b>1 litre @ Rs 500</b></p>
+            <button class="btn btn-primary cart">Add to Cart</button>
+          </div>
+        </div>
+
+    </div>
+{% endblock %}
+{% block js %}
+{% endblock %}

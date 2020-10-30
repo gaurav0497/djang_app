@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+{% block css %}
+ .card-img{
+    width: 340px;
+    height: 300px;
+    border-radius: 4px;
+    box-shadow: 5px 8px 5px 5px whitesmoke;
+  }
+  .img-thumbnail{
+   box-shadow: -2px 6px 8px 2px lightblue;
+ }
+{% endblock %}
+{% block content %}
+    <div class="row m-2 " style="text-align:center;color:green;">
+        <a href="/menu/grocessory"><div class="m-2 img-thumbnail" >
+                {% load static %}
+              <img src="{% static 'grocessory.jpg' %}" class="card-img" alt="no image">
+              <div><h3><b>Grocesries</b></h3></div>
+        </div></a>
+        <a href="/menu/grocessory"><div class="m-2 img-thumbnail" >
+                {% load static %}
+              <img src="{% static 'fruitandveg.jpg' %}" class="card-img" alt="no image">
+              <div><h3><b>Fruits and Veg</b></h3></div>
+        </div></a>
+        <a href="/menu/grocessory"><div class="m-2 img-thumbnail" >
+                {% load static %}
+              <img src="{% static 'food.jpg' %}" class="card-img" alt="no image">
+            <div><h3><b>Food outlets</b></h3></div>
+        </div></a>
+
+        <a href="/menu/grocessory"><div class="m-2 img-thumbnail" >
+                {% load static %}
+              <img src="{% static 'stationary.jpg' %}" class="card-img" alt="no image">
+              <div><h3><b>Stationary and book</b></h3></div>
+        </div></a>
+        <a href="/menu/grocessory"><div class="m-2 img-thumbnail" >
+                {% load static %}
+              <img src="{% static 'fashion.jpg' %}" class="card-img" alt="no image">
+              <div><h3><b>Fashion</b></h3></div>
+        </div></a>
+        <a href="/menu/grocessory"><div class="m-2 img-thumbnail" >
+                {% load static %}
+              <img src="{% static 'electrical.jpg' %}" class="card-img" alt="no image">
+              <div><h3><b>Electrical items</b></h3></div>
+        </div></a>
+        <a href="/menu/grocessory"><div class="m-2 img-thumbnail" >
+
+                {% load static %}
+              <img src="{% static 'diary.jpg' %}" class="card-img" alt="no image">
+            <div><h3><b>Dairy product</b></h3></div>
+        </div></a>
+        <a href="/menu/grocessory"><div class="m-2 img-thumbnail" >
+
+                {% load static %}
+              <img src="{% static 'special.jpg' %}" class="card-img" alt="no image">
+            <div><h3><b>Nogozo Specials</b></h3></div>
+        </div></a>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+$('#menu').addClass('active');
+{% endblock %}
